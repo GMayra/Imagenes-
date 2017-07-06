@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>imagenes</title>
+</head>
+<body>
+
+<h1><center>CAMBIO DE IMAGENES</center></h1>
+<center><span id="imagenes">
+<img src="paisaje1.jpg"  width="300" height="300" onmouseover="Ver(1)" onmouseleave="Volver(1)">
+<img src="paisaje2.jpg"  width="300" height="300" onmouseover="Ver(2)" onmouseleave="Volver(2)">
+<img src="paisaje3.jpg"  width="300" height="300" onmouseover="Ver(3)" onmouseleave="Volver(3)">
+</span>
+</center>
+
+	<script type="text/javascript" >
+		
+function Ver(variable) {
+		if (variable == 1) {
+			document.getElementById('imagenes').childNodes[1].src = 'paisaje2.jpg';
+		}else if(variable == 2){
+			document.getElementById('imagenes').childNodes[3].src = 'paisaje3.jpg';
+		}else if(variable == 3){
+			document.getElementById('imagenes').childNodes[5].src = 'paisaje1.jpg';
+		}
+	}
+	function Volver(variable){
+		if (variable == 1) {
+			document.getElementById('imagenes').childNodes[1].src = 'paisaje1.jpg';
+		}else if(variable == 2){
+			document.getElementById('imagenes').childNodes[3].src = 'paisaje2.jpg';
+		}else if(variable == 3){
+			document.getElementById('imagenes').childNodes[5].src = 'paisaje3.jpg';
+		}
+	}
+	</script>
+</body>
+</html>
